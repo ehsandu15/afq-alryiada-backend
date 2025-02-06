@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_advanced_headings",
+  "info": {
+    "displayName": "advancedHeading"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

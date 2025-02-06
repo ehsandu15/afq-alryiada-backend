@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_advanced_links",
+  "info": {
+    "displayName": "advancedLink"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    },
+    "elementId": {
+      "type": "string"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -20,7 +20,18 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "canonicalUrl": {
+      "type": "text"
+    },
+    "robots": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "text"
     }
   }
 }

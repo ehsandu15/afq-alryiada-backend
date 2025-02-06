@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_headers",
+  "info": {
+    "singularName": "app-header",
+    "pluralName": "app-headers",
+    "displayName": "app-header",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "ctaBtn": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.basic-link"
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.advanced-heading"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigation_lists",
+  "info": {
+    "singularName": "navigation-list",
+    "pluralName": "navigation-lists",
+    "displayName": "navigation-list"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "href": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_seo_open_graphs",
+  "info": {
+    "displayName": "seo-open-graph"
+  },
+  "options": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "text"
+    },
+    "ogType": {
+      "type": "string"
+    },
+    "ogUrl": {
+      "type": "text"
+    },
+    "ogSiteName": {
+      "type": "string"
+    },
+    "ogLocale": {
+      "type": "string"
+    },
+    "ogImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ogImageAlt": {
+      "type": "string"
+    }
+  }
+}

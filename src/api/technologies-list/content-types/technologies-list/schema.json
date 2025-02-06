@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies_lists",
+  "info": {
+    "singularName": "technologies-list",
+    "pluralName": "technologies-lists",
+    "displayName": "technologies-list"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

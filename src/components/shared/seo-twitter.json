@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_seo_twitters",
+  "info": {
+    "displayName": "seo-twitter"
+  },
+  "options": {},
+  "attributes": {
+    "twitterCard": {
+      "type": "string"
+    },
+    "twitterTitle": {
+      "type": "text"
+    },
+    "twitterDescription": {
+      "type": "text"
+    },
+    "twitterImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "twitterImageAlt": {
+      "type": "string"
+    },
+    "twitterSite": {
+      "type": "text"
+    },
+    "twitterCreator": {
+      "type": "string"
+    }
+  }
+}

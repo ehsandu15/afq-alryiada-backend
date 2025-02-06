@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_basic_links",
+  "info": {
+    "displayName": "basicLink"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    }
+  }
+}
