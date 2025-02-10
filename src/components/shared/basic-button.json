@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_basic_buttons",
+  "info": {
+    "displayName": "basicButton"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "elemId": {
+      "type": "string"
+    }
+  }
+}

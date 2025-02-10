@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAdvancedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_advanced_buttons';
+  info: {
+    displayName: 'advancedButton';
+  };
+  attributes: {
+    elemId: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedAdvancedHeading extends Struct.ComponentSchema {
   collectionName: 'components_shared_advanced_headings';
   info: {
@@ -25,6 +37,17 @@ export interface SharedAdvancedLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBasicButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_basic_buttons';
+  info: {
+    displayName: 'basicButton';
+  };
+  attributes: {
+    elemId: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBasicLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_basic_links';
   info: {
@@ -33,6 +56,24 @@ export interface SharedBasicLink extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFormField extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_fields';
+  info: {
+    description: '';
+    displayName: 'form-field';
+  };
+  attributes: {
+    elemId: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      ['text', 'number', 'tel', 'textarea', 'url', 'search', 'email']
+    > &
+      Schema.Attribute.DefaultTo<'text'>;
   };
 }
 
@@ -104,9 +145,12 @@ export interface SharedSeoTwitter extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.advanced-button': SharedAdvancedButton;
       'shared.advanced-heading': SharedAdvancedHeading;
       'shared.advanced-link': SharedAdvancedLink;
+      'shared.basic-button': SharedBasicButton;
       'shared.basic-link': SharedBasicLink;
+      'shared.form-field': SharedFormField;
       'shared.seo': SharedSeo;
       'shared.seo-open-graph': SharedSeoOpenGraph;
       'shared.seo-structured-data': SharedSeoStructuredData;

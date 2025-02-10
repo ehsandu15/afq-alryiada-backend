@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_advanced_buttons",
+  "info": {
+    "displayName": "advancedButton"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "elemId": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
