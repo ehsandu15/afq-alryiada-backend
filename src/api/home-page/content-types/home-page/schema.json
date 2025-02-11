@@ -317,19 +317,35 @@
       "target": "api::social-media.social-media"
     },
     "testimonialsPeoplesPatternImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "heroId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
+    },
+    "servicesId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
+    },
+    "testimonialsId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
     }
   }
 }

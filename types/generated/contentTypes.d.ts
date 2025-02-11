@@ -702,6 +702,12 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    noArticlesFound: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     searchPlaceholder: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -1151,6 +1157,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    heroId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1228,6 +1238,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    servicesId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     servicesSecondaryDescription: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1284,6 +1298,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    testimonialsId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     testimonialsPeoplesPatternImg: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -1315,6 +1333,7 @@ export interface ApiNavigationListNavigationList
   extends Struct.CollectionTypeSchema {
   collectionName: 'navigation_lists';
   info: {
+    description: '';
     displayName: 'navigation-list';
     pluralName: 'navigation-lists';
     singularName: 'navigation-list';
@@ -1331,6 +1350,12 @@ export interface ApiNavigationListNavigationList
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    elementId: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     href: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

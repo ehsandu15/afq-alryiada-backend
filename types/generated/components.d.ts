@@ -51,9 +51,11 @@ export interface SharedBasicButton extends Struct.ComponentSchema {
 export interface SharedBasicLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_basic_links';
   info: {
+    description: '';
     displayName: 'basicLink';
   };
   attributes: {
+    elementId: Schema.Attribute.String;
     href: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
