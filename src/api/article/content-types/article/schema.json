@@ -45,11 +45,16 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
-    "content": {
-      "type": "blocks"
-    },
     "keywords": {
       "type": "text"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml",
+        "maxLengthWords": null
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

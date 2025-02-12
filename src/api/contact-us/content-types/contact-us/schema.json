@@ -86,6 +86,22 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::social-media.social-media"
+    },
+    "formSendErrorMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "formSendSuccessMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }

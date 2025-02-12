@@ -9,6 +9,24 @@ export default ({ env }) => ({
       locales: ["en", "ar"],
     },
   },
+  email: {
+    config: {
+      provider: "nodemailer",
+      providerOptions: {
+        service: "gmail",
+        host: env("SMTP_HOST", "smtp.gmail.com"),
+        port: env("SMTP_PORT", 587),
+        auth: {
+          user: env("SMTP_USERNAME"),
+          pass: env("SMTP_PASSWORD"),
+        },
+      },
+      settings: {
+        defaultFrom: env("DEFAULT_FROM_EMAIL"),
+        defaultReplyTo: env("DEFAULT_REPLAY_TO_EMAIL"),
+      },
+    },
+  },
   // upload: {
   //   config: {
   //     provider: "strapi-provider-upload-cloudflare",
