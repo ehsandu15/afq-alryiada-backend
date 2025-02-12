@@ -7,11 +7,9 @@ module.exports = {
         .plugin("email")
         .service("email")
         .send({
-          to: result.email,
-          from: process.env.DEFAULT_FROM_EMAIL,
-          //   to: 'someone2@example.com',
-          subject: `You have a new email from , [ ${result.firstName} ${result.lastName} ]`,
-          //   text: `${result.message} \n \n phone number : ${result.phoneNumber} \n name: ${result.firstName} ${result.lastName}`,
+          from: result.email,
+          to: process.env.DEFAULT_TO_EMAIL,
+          subject: `You have a new email from , ${result.firstName} ${result.lastName} `,
           html: `<!DOCTYPE html>
                 <html lang="en">
                 <head>
