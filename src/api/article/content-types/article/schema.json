@@ -51,8 +51,7 @@
     "content": {
       "type": "customField",
       "options": {
-        "preset": "defaultHtml",
-        "maxLengthWords": null
+        "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     }
