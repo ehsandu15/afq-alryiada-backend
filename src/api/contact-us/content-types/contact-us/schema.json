@@ -82,7 +82,7 @@
       },
       "type": "text"
     },
-    "social_media": {
+    "whatsapp": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::social-media.social-media"

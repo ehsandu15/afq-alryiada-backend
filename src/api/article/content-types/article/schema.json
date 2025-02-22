@@ -45,15 +45,18 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
-    "keywords": {
-      "type": "text"
-    },
     "content": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "keywords": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.basic-link"
+      ]
     }
   }
 }

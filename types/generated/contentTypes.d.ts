@@ -610,7 +610,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;
       }>;
-    keywords: Schema.Attribute.Text;
+    keywords: Schema.Attribute.DynamicZone<['shared.basic-link']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -890,13 +890,13 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    social_media: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::social-media.social-media'
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    whatsapp: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::social-media.social-media'
+    >;
   };
 }
 
