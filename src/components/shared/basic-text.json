@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_basic_texts",
+  "info": {
+    "displayName": "basicText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "word": {
+      "type": "string"
+    }
+  }
+}

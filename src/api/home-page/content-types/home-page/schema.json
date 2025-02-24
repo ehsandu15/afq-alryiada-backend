@@ -16,14 +16,6 @@
     }
   },
   "attributes": {
-    "heroHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "heroAdvancedTitle": {
       "displayName": "advancedHeading",
       "type": "component",
@@ -79,14 +71,6 @@
       },
       "component": "shared.advanced-heading"
     },
-    "servicesHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "servicesDescription": {
       "pluginOptions": {
         "i18n": {
@@ -94,14 +78,6 @@
         }
       },
       "type": "text"
-    },
-    "servicesSecondaryHeading": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     },
     "servicesSecondaryDescription": {
       "pluginOptions": {
@@ -155,14 +131,6 @@
         }
       }
     },
-    "privilegeHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "privilegeDescription": {
       "pluginOptions": {
         "i18n": {
@@ -197,14 +165,6 @@
       },
       "component": "shared.advanced-heading"
     },
-    "cooperationHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "cooperationDescription": {
       "pluginOptions": {
         "i18n": {
@@ -217,14 +177,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::technologies-list.technologies-list"
-    },
-    "techHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     },
     "techDescription": {
       "pluginOptions": {
@@ -249,14 +201,6 @@
       "relation": "oneToMany",
       "target": "api::cooperation-list.cooperation-list"
     },
-    "blogHeaingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "blogDescription": {
       "pluginOptions": {
         "i18n": {
@@ -279,22 +223,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
-    },
-    "partnersHeaingtitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "testimonialsHeadingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     },
     "testimonialsSectionTitle": {
       "type": "component",
@@ -346,6 +274,96 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::navigation-list.navigation-list"
+    },
+    "servicesHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "servicesSecondaryHeading": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "privilegeHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "cooperationHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "techHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "blogHeaingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "partnersHeaingtitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "testimonialsHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
+    },
+    "heroHeadingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
     }
   }
 }

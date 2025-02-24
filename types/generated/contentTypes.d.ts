@@ -1153,7 +1153,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    blogHeaingTitle: Schema.Attribute.String &
+    blogHeaingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1181,7 +1184,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    cooperationHeadingTitle: Schema.Attribute.String &
+    cooperationHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1217,7 +1223,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    heroHeadingTitle: Schema.Attribute.String &
+    heroHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1232,7 +1241,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::home-page.home-page'
     >;
-    partnersHeaingtitle: Schema.Attribute.String &
+    partnersHeaingtitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1252,7 +1264,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    privilegeHeadingTitle: Schema.Attribute.String &
+    privilegeHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1298,7 +1313,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    servicesHeadingTitle: Schema.Attribute.String &
+    servicesHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1314,7 +1332,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    servicesSecondaryHeading: Schema.Attribute.String &
+    servicesSecondaryHeading: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1335,7 +1356,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    techHeadingTitle: Schema.Attribute.String &
+    techHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1358,7 +1382,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::testimonials-list.testimonials-list'
     >;
-    testimonialsHeadingTitle: Schema.Attribute.String &
+    testimonialsHeadingTitle: Schema.Attribute.Component<
+      'shared.section-heading',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

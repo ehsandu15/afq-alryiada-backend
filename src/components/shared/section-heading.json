@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_section_headings",
+  "info": {
+    "displayName": "sectionHeading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "highlightWords": {
+      "displayName": "basicText",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.basic-text"
+    }
+  }
+}

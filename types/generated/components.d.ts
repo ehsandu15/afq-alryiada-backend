@@ -61,6 +61,17 @@ export interface SharedBasicLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBasicText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_basic_texts';
+  info: {
+    description: '';
+    displayName: 'basicText';
+  };
+  attributes: {
+    word: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFormField extends Struct.ComponentSchema {
   collectionName: 'components_shared_form_fields';
   info: {
@@ -76,6 +87,18 @@ export interface SharedFormField extends Struct.ComponentSchema {
       ['text', 'number', 'tel', 'textarea', 'url', 'search', 'email']
     > &
       Schema.Attribute.DefaultTo<'text'>;
+  };
+}
+
+export interface SharedSectionHeading extends Struct.ComponentSchema {
+  collectionName: 'components_shared_section_headings';
+  info: {
+    description: '';
+    displayName: 'sectionHeading';
+  };
+  attributes: {
+    highlightWords: Schema.Attribute.Component<'shared.basic-text', true>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -152,7 +175,9 @@ declare module '@strapi/strapi' {
       'shared.advanced-link': SharedAdvancedLink;
       'shared.basic-button': SharedBasicButton;
       'shared.basic-link': SharedBasicLink;
+      'shared.basic-text': SharedBasicText;
       'shared.form-field': SharedFormField;
+      'shared.section-heading': SharedSectionHeading;
       'shared.seo': SharedSeo;
       'shared.seo-open-graph': SharedSeoOpenGraph;
       'shared.seo-structured-data': SharedSeoStructuredData;
