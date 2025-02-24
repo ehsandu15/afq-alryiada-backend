@@ -102,6 +102,22 @@
         }
       },
       "type": "text"
+    },
+    "formDuplicatedUseMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "formSomethingWentWrongMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }

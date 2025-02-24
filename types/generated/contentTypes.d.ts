@@ -781,6 +781,7 @@ export interface ApiContactRequestContactRequest
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_requests';
   info: {
+    description: '';
     displayName: 'contact-request';
     pluralName: 'contact-requests';
     singularName: 'contact-request';
@@ -794,6 +795,7 @@ export interface ApiContactRequestContactRequest
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
+    ipV4: Schema.Attribute.String & Schema.Attribute.Unique;
     lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -801,6 +803,7 @@ export interface ApiContactRequestContactRequest
       'api::contact-request.contact-request'
     > &
       Schema.Attribute.Private;
+    location: Schema.Attribute.Text;
     message: Schema.Attribute.Text;
     phoneNumber: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
@@ -860,6 +863,12 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    formDuplicatedUseMessage: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     formSendErrorMessage: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -867,6 +876,12 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
         };
       }>;
     formSendSuccessMessage: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    formSomethingWentWrongMessage: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

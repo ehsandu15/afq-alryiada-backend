@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-request",
     "pluralName": "contact-requests",
-    "displayName": "contact-request"
+    "displayName": "contact-request",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +25,13 @@
       "type": "string"
     },
     "message": {
+      "type": "text"
+    },
+    "ipV4": {
+      "type": "string",
+      "unique": true
+    },
+    "location": {
       "type": "text"
     }
   }
