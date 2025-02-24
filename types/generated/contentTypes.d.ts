@@ -395,7 +395,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    headingTitle: Schema.Attribute.String &
+    headingTitle: Schema.Attribute.Component<'shared.section-heading', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -455,12 +455,6 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::social-media.social-media'
     >;
-    textHighlightWord: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     thirdDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

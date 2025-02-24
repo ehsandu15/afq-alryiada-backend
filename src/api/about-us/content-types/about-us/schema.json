@@ -81,22 +81,6 @@
       "relation": "oneToMany",
       "target": "api::social-media.social-media"
     },
-    "headingTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "textHighlightWord": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "secondarySectionBackground": {
       "type": "media",
       "multiple": false,
@@ -133,6 +117,16 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::social-media.social-media"
+    },
+    "headingTitle": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.section-heading"
     }
   }
 }
