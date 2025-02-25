@@ -1162,6 +1162,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    blogsId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     contactBtn: Schema.Attribute.Component<'shared.advanced-link', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1187,6 +1191,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    cooperationId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1290,6 +1298,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    privilegesId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     services_lists: Schema.Attribute.Relation<
       'oneToMany',
@@ -1362,6 +1374,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     technologies_lists: Schema.Attribute.Relation<
       'oneToMany',
       'api::technologies-list.technologies-list'
+    >;
+    technologiesId: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::navigation-list.navigation-list'
     >;
     techSectionTitle: Schema.Attribute.Component<
       'shared.advanced-heading',
@@ -1613,6 +1629,39 @@ export interface ApiServicesListServicesList
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSharedShared extends Struct.SingleTypeSchema {
+  collectionName: 'shareds';
+  info: {
+    description: '';
+    displayName: 'shared';
+    pluralName: 'shareds';
+    singularName: 'shared';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::shared.shared'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whatsapp: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::social-media.social-media'
+    >;
   };
 }
 
@@ -2248,6 +2297,7 @@ declare module '@strapi/strapi' {
       'api::partners-list.partners-list': ApiPartnersListPartnersList;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::services-list.services-list': ApiServicesListServicesList;
+      'api::shared.shared': ApiSharedShared;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::technologies-list.technologies-list': ApiTechnologiesListTechnologiesList;
       'api::testimonials-list.testimonials-list': ApiTestimonialsListTestimonialsList;

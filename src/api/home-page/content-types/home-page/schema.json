@@ -364,6 +364,26 @@
         }
       },
       "component": "shared.section-heading"
+    },
+    "privilegesId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
+    },
+    "cooperationId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
+    },
+    "blogsId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
+    },
+    "technologiesId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation-list.navigation-list"
     }
   }
 }
