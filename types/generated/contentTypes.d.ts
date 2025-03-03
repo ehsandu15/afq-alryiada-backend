@@ -604,7 +604,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;
       }>;
-    keywords: Schema.Attribute.DynamicZone<['shared.basic-link']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -613,6 +612,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1695,6 +1695,32 @@ export interface ApiSocialMediaSocialMedia extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTagTag extends Struct.CollectionTypeSchema {
+  collectionName: 'tags';
+  info: {
+    displayName: 'tag';
+    pluralName: 'tags';
+    singularName: 'tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
+      Schema.Attribute.Private;
+    normalizedTagName: Schema.Attribute.UID<'tagName'>;
+    publishedAt: Schema.Attribute.DateTime;
+    tagName: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTechnologiesListTechnologiesList
   extends Struct.CollectionTypeSchema {
   collectionName: 'technologies_lists';
@@ -2299,6 +2325,7 @@ declare module '@strapi/strapi' {
       'api::services-list.services-list': ApiServicesListServicesList;
       'api::shared.shared': ApiSharedShared;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
+      'api::tag.tag': ApiTagTag;
       'api::technologies-list.technologies-list': ApiTechnologiesListTechnologiesList;
       'api::testimonials-list.testimonials-list': ApiTestimonialsListTestimonialsList;
       'plugin::content-releases.release': PluginContentReleasesRelease;

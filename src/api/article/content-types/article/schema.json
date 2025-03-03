@@ -52,11 +52,10 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "keywords": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.basic-link"
-      ]
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
     }
   }
 }
