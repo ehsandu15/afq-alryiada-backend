@@ -789,7 +789,7 @@ export interface ApiContactRequestContactRequest
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
-    ipV4: Schema.Attribute.String & Schema.Attribute.Unique;
+    ipV4: Schema.Attribute.String;
     lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

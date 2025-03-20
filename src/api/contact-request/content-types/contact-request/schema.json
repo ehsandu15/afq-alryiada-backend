@@ -29,7 +29,7 @@
     },
     "ipV4": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "location": {
       "type": "text"
